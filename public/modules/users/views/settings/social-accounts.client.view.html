@@ -1,4 +1,34 @@
 <section class="row" data-ng-controller="SettingsController">
+<fieldset>
+		<h3 class="col-md-12 text-center">Profile</h3>	
+		<div class="form-group">
+					<label for="firstName">First Name</label>
+					<span data-ng-bind="user.firstName" ></span>
+				</div>
+				<div class="form-group">
+					<label for="lastName">Last Name</label>
+					<span data-ng-bind="user.lastName" ></span>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<span data-ng-bind="user.email" ></span>
+				</div>
+				<div class="form-group">
+					<label for="username">Username</label>
+					<span data-ng-bind="user.username" ></span>
+				</div>
+				<div class="form-group">
+					<label for="facebook">Facebook</label>
+					<span data-ng-bind="user.facebook" ></span>
+				</div>
+				<div class="form-group">
+					<label for="twitter">Twitter</label>
+					<span data-ng-bind="user.twitter" ></span>
+				</div>
+				<div data-ng-show="error" class="text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
 	<h3 class="col-md-12 text-center" data-ng-show="hasConnectedAdditionalSocialAccounts()">Connected social accounts:</h3>
 	<div class="col-md-12 text-center">
 		<div data-ng-repeat="(providerName, providerData) in user.additionalProvidersData" class="remove-account-container">
@@ -8,7 +38,10 @@
 			</a>
 		</div>
 	</div>
-	<h3 class="col-md-12 text-center">Connect other social accounts:</h3>
+	
+	
+			
+		
 	<div class="col-md-12 text-center">
 		<a href="/auth/facebook" data-ng-hide="isConnectedSocialAccount('facebook')" class="undecorated-link">
 			<img src="/modules/users/img/buttons/facebook.png">

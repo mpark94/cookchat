@@ -12,28 +12,6 @@
 
 <section class="row" data-ng-controller="SettingsController">
 	<h3 class="col-md-12 text-center">Edit your profile</h3>
-    
-    
-<section data-ng-controller="PhotosController" data-ng-init="find()">
-    
-    <div class="col-md-12">
-        <form class="form-horizontal" action="photos/" method="post" enctype="multipart/form-data" novalidate>
-            <fieldset>
-                <div class="form-group">
-                </div>
-        <input type="file" name="image" data-ng-model="imageHolder.image" id="image" accept="image/*" required/><br/>
-
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-
-            </fieldset>
-        </form>
-    </div>
-</section>
 
     
 	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2" style = "margin-right: 80px;">
